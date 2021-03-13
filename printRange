@@ -1,0 +1,13 @@
+void printRange(int n, int m){
+    if(n>m){
+        throw n;
+    }
+    static int mid=1;
+    cout<<n;
+    if(n==m)return;
+    if((m-n)>mid)cout<<" > ";
+    else if((m-n)==mid)cout<<" -- ";
+    else cout<<" < ";
+    mid++;
+    printRange(n+1,m);
+}
