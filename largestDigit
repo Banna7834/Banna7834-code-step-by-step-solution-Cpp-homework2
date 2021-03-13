@@ -1,0 +1,15 @@
+int largestDigit(int number)
+{
+    int a,b;
+  if(number<0)number*=-1;
+    if(number==0)
+        return 0;
+    else{
+        a = number%10;
+        b = largestDigit(number/10);
+        if(a>b)
+            return a;
+        else
+            return b;
+    }
+}
