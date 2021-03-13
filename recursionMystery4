@@ -1,0 +1,10 @@
+recursionMystery4(2);	
+**
+recursionMystery4(3);	
+(*)
+recursionMystery4(4);	
+(**)
+recursionMystery4(6);	
+((**))
+recursionMystery4(9);	
+((((*))))
