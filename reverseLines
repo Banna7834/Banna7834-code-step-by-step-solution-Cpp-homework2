@@ -1,0 +1,9 @@
+void reverseLines(ifstream &fileIn){
+    if(!fileIn){
+        return;
+    }
+    string str=" ";
+    getline(fileIn,str);
+    reverseLines(fileIn);
+    cout<<str<<endl;
+}
