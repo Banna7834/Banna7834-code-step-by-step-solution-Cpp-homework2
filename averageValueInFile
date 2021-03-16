@@ -1,0 +1,14 @@
+double averageValueInFile(string filename){
+    ifstream fin;
+    fin.open(filename);
+    double value=0;
+    double sum=0;
+    size_t k=0;
+    while(fin>>value){
+        sum=sum+value;
+        ++k;
+    }
+    if(k==0)return 0.0;
+    fin.close();
+    return sum/k;
+}
