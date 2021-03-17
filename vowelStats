@@ -1,0 +1,21 @@
+void vowelStats(string input){
+    ifstream fin;
+    fin.open(input);
+    string text="";
+    size_t longest=0;
+    size_t j=1;
+    double total =0;
+    while(getline(fin,text)){
+        size_t count=0;
+        size_t n=text.size();
+        total+=n;
+        if(n>longest)longest=n;
+        for(int i=0;i<n;i++){
+            if(text[i]=='a' || text[i]=='A' || text[i]=='e' || text[i]=='E' || text[i]=='i' || text[i]=='I' || text[i]=='o' || text[i]=='O' || text[i]=='u' || text[i]=='U' ){
+                ++count;
+            }
+        }
+        cout<<"Line "<<j++<<" has "<<n<<" chars and "<<count<<" vowels\n";
+    }
+    cout<<j-1<<" lines; longest = "<<longest<<", average = "<<total/(j-1);
+}
